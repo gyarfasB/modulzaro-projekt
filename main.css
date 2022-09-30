@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter Tight', sans-serif;
+    letter-spacing: 0.1em;
+}
+.gold {
+    color: #AC9870;
+}
+.light-gold {
+    color: #948876;
+}
+a {
+    text-decoration: none;
+}
+.bold {
+    font-weight: 600;
+}
+.block {
+    display: block;
+}
+/* ------------FIX THE ICON PLACEMENT------------ */
+#nav-1 span{
+    transform: translate(0, 0.3em) ;
+}
+/* ------------------HEADER, NAV----------------- */
+header {
+    color: #353535;
+}
+#nav-1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+.account:hover, .location:hover {
+    cursor: pointer;
+}
+#nav-2 {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+    border-bottom: 1px solid #7b7b7b;
+    background-color: #fff;
+} 
+#nav-2 a {
+    text-transform: uppercase;
+    color:#353535;
+}
+#nav-2 ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+#nav-2 li:hover {
+    cursor: pointer;
+    border-radius: 25px;
+    background-color: #7b7b7b;
+    color: #fff;
+
+}
+/* ------------------MAIN----------------- */
+.rodecaster, .nth-100, .nt-usb {
+    text-align: center;
+    padding: 6em;
+}
+.rodecaster {
+    background-color: rgb(64,64,64);
+    background: linear-gradient(141deg, rgba(64,64,64,1) 26%, rgba(0,0,0,1) 100%);
+    color: #fff;
+}
+.rodecaster a:hover {
+    cursor: pointer;
+} 
+.rodecaster p, .nth-100 p, .nt-usb p {
+    font-size: 1.7em;
+}
+.nth-100 {
+    background-color: rgb(199,199,199);
+    background: linear-gradient(69deg, rgba(199,199,199,1) 62%, rgba(233,233,233,1) 100%);
+}
+.nt-usb {
+    background: rgb(178, 156, 10);
+    background: linear-gradient(97deg, rgba(178,156,10) 0%, rgba(255,255,255,1) 69%);
+}
+.buyNow {
+    text-decoration: none;
+    border: 1px solid #AC9870;
+    border-radius: 25px;
+    color: #fff;
+    padding: 0.3em;
+    background-color: #AC9870;
+    font-weight: 550;
+    transition: 0.2s;
+}
+.buyNow:hover {
+    background-color: #fff;
+    color: #AC9870;
+}
+/* --------------BLOG,FIGURES-------------- */
+.blog {
+    text-align: center;
+    color: #353535;
+    background-color: #F8F9FA;
+}
+.articles img {
+    width: 400px;
+    height: 360px;
+}
+.articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+.articles a {
+    border: 1px solid #AC9870;
+    border-radius: 25px;
+    color: #fff;
+    padding: 0.3em;
+    background-color: #AC9870;
+    transition: 0.2s;
+}
+figure {
+    text-align: center;
+    padding: 1em;
+    background-color: #fff;
+}
+.articles a:hover {
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 25px;
+    color: #AC9870;
+}
+/* ---------------FOOTER--------------- */
+#footer-1 ul {
+    list-style-type: none;
+}
+#footer-1 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-self: center;
+    padding: 2em;
+}
+.sign-up {
+    text-align: right;
+}
+.closing-image img {
+    transform: translate(0, 1.5em)
+}
+#footer-2 {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+}
+#logos {
+    letter-spacing: 2em;
+}
+#logos img {
+    width: 22px;
+    height: 22px;
+}
+#logos img:hover {
+    cursor: pointer;
+}
+/* ------------MOBILE, TABLET------------ */
+@media (max-width: 1024px)  {
+    .articles {
+        display: block;
+    }
+    figure {
+        padding-top: 5em;
+        padding-bottom: 5em;
+    }
+    #footer-2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+}
+@media (max-width: 768px) {
+    #nav-2 {
+        flex-direction: column;
+    }
+    #nav-2 h1 {
+        margin: 0;
+    }
+    #nav-2 a, #search-icon {
+        display: none;
+    }
+    .articles img {
+        width: 300px;
+        height: 270px;
+    }
+    #footer-1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 425px) {
+    .rodecaster, .nth-100, .nt-usb {
+        padding: 2em;
+    }
+    figure {
+        padding: 1em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .articles img {
+        width: 200px;
+        height: 180px;
+    }
+    #footer-1 {
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        grid-gap: 1em;
+    }
+}
